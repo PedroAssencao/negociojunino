@@ -1,0 +1,65 @@
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    width: 10rem;
+    height: 10rem;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+
+/* CSS media query dentro de um stylesheet */
+.ContainerPai {
+    max-width: 50%
+}
+
+.Ativo {
+    visibility: visible;
+}
+
+.Desativo {
+    transform: rotateY(180deg);
+}
+
+.Inclicavel {
+    pointer-events: none;
+}
+
+@media (max-width: 992px) {
+    .ContainerPai {
+        max-width: 97%
+    }
+}
